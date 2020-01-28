@@ -1,0 +1,2 @@
+My experience with JS this week has been frustrating. Though I have played with JS before it was long enougha go that I forgot my syntax and spent more time than I should have ahd to to get a grip. 
+That said I learned considerably more than I expected this week through research and the class itself.
