@@ -1,2 +1,4 @@
-My experience with JS this week has been frustrating. Though I have played with JS before it was long enougha go that I forgot my syntax and spent more time than I should have ahd to to get a grip. 
-That said I learned considerably more than I expected this week through research and the class itself.
+Javascript this week was intense. 
+I was many times over reminded of how little I know and how importnat little errors are in the end. 
+I think the design of my idea is simple and shows its basic functionality. I wish i could have hidden or
+ greyed buttons as I wanted but that was beyond my time frame.

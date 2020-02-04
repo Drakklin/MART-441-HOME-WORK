@@ -1,14 +1,17 @@
-
+// creating a object "box" as a constant. setting its size.
 function Choice(elem) {
   const box = document.getElementById('box');
 	myImage.style.height = '500px';
     myImage.style.width = '500px';
+	// happy if loop with multiple attribute swaps. >>>>>>>>
   if (elem.id == 'x'){
+	  // placeholder images...sorry
 	document.getElementById("myImage").src = 'img1.gif';
     box.style.backgroundColor = 'red';
+	  
 	  document.getElementById('myspan').textContent = 'Found in the night by robbers you become their prey \n END';
   } 
-	
+	// our buttons values are checked
 	else if (elem.id == 'y') {
 	  document.getElementById("myImage").src = 'crossroad.gif';
 	   document.body.style.background = 'black';
