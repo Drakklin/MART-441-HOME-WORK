@@ -70,15 +70,10 @@ function Choice(elem) {
 
 	}
 
-  function getName(greeting)
-            {
-                var currentName = document.getElementById("txtName").value;
-                document.getElementById("lblName").innerHTML = currentName + ", " + greeting;
-                
-            }
+  
 	 do {
 document.getElementById("heart").src = 'xheart.gif';
  
 } while(
-elem.id != 'x' ||  elem.id != 'z');
+elem.id === 'x' ||  elem.id === 'z');
 }

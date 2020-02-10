@@ -9,6 +9,7 @@
     
   
 <body>
+	<h1 id=h1>hello</h1>
 <!-- div creates the bkgnd -->
 <p id='demo' style='display: none'>Hello Javascript</p>
 <div> 
@@ -50,6 +51,13 @@ you wander far from town" </span>
         <input id="txtName" type="text"><br>
         <button id="btnSubmit" onclick="getName();">Submit</button><br>
 		<img src="heart.gif" alt="life" width="100" height="100"class="heart" id="heart" /> 
-
-	 </body>
+	<script>
+	function getName(greeting)
+            {
+                var currentName = document.getElementById("txtName").value;
+                document.getElementById("lblName").innerHTML = currentName + ", welcome to the game!" ;
+                 document.getElementById("h1").textContent = currentName + "Try to survive!";
+            }
+	</script> 
+		</body>
 </html>
