@@ -9,9 +9,10 @@
     
   
 <body>
-	<h1 id=h1>hello</h1>
+	
+	<h1 align="center" id=h1>Enter name in character area to play!</h1>
 <!-- div creates the bkgnd -->
-<p id='demo' style='display: none'>Hello Javascript</p>
+
 <div> 
 <!-- creates the box-->
 <div id="box">
@@ -23,26 +24,37 @@
 
 <!-- buttons and their names -->
 
-<button id="x" onclick="x.style.visibility='hidden'; y.style.visibility='hidden'; z.style.visibility = 'visable'; Choice(this); ">Sleep</button>
+<button id="x" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
+						 e.style.visibility='hidden'; ">Sleep</button>
 
-<button id="y" onclick="y.style.visibility='hidden';x.style.visibility='hidden';  ">Push on</button>
+<button id="y" onclick="y.style.visibility='hidden';x.style.visibility='hidden'; Choice(this); ">Push on</button>
 <span id="myspan"  class="span"> "Alone and out of money, luck and charm 
 you wander far from town" </span>
 
 
 	
-<button id="z"  onclick="z.style.visibility='hidden'; Choice(this); ">landslide</button>
-<button id="a"  onclick="a.style.visibility='hidden'; Choice(this); ">cavern</button>
+<button id="z"  onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
+						 e.style.visibility='hidden';">landslide</button>
+<button id="a"  onclick="x.style.visibility='hidden';y.style.visibility='hidden';a.style.visibility='hidden'; z.style.visibility='hidden'; Choice(this); ">cavern</button>
 	<!-- good and out of order -->
 <span id="myspan4" class="span"> </span>
 	
-<button id="b" onclick="b.style.visibility='hidden';c.style.visibility='hidden'; Choice(this);">Dodge</button>
-<button id="c" onclick="c.style.visibility='hidden' ;b.style.visibility='hidden'; Choice(this);">Block</button>
+<button id="b" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';">Dodge</button>
+<button id="c" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
+						 e.style.visibility='hidden';">Block</button>
 	
 <span id="myspan2" class="span"> </span>
 	
-<button id="d" onclick="d.style.visibility='hidden';e.style.visibility='hidden'; Choice(this)";>Flee Right</button>
-<button id="e" onclick="e.style.visibility='hidden';d.style.visibility='hidden'; Choice(this)";>Flee Left</button>
+<button id="d" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
+						 e.style.visibility='hidden'";>Flee Right</button>
+<button id="e" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
+						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
+						 e.style.visibility='hidden'";>Flee Left</button>
 
 <span id="myspan3" class="span"> </span>
 	</pre>
@@ -50,13 +62,16 @@ you wander far from town" </span>
 	   <label id="lblName">Your Name Goes Here</label><br>
         <input id="txtName" type="text"><br>
         <button id="btnSubmit" onclick="getName();">Submit</button><br>
+		<button onClick="window.location.reload();">Restart</button>
+	<Div Heart>
 		<img src="heart.gif" alt="life" width="100" height="100"class="heart" id="heart" /> 
-	<script>
+	</Div>
+		<script>
 	function getName(greeting)
             {
                 var currentName = document.getElementById("txtName").value;
-                document.getElementById("lblName").innerHTML = currentName + ", welcome to the game!" ;
-                 document.getElementById("h1").textContent = currentName + "Try to survive!";
+                document.getElementById("lblName").innerHTML = currentName;  //", welcome to the game!" ;
+                 document.getElementById("h1").textContent = currentName+"," + " " + "Try to survive!";
             }
 	</script> 
 		</body>

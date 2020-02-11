@@ -10,6 +10,7 @@ function Choice(elem) {
 	// happy if loop with multiple attribute swaps. >>>>>>>>
   if (elem.id == 'x'){
 	  // placeholder images...sorry
+	   document.body.style.background = 'Red';
 	document.getElementById("myImage").src = 'img1.gif';
     box.style.backgroundColor = 'red';
 	  
@@ -18,19 +19,19 @@ function Choice(elem) {
 	// our buttons values are checked
 	else if (elem.id == 'y') {
 	  document.getElementById("myImage").src = 'crossroad.gif';
-	   document.body.style.background = 'black';
+	   document.body.style.background = 'grey';
     box.style.backgroundColor = 'green';
 	   document.getElementById('myspan').textContent = 'Pushing through the dense woods you crest a hill and see before you';
   } 
 	else if (elem.id == 'z') {
-		   document.body.style.background = 'black';
+		   document.body.style.background = 'red';
 	document.getElementById("myImage").src = 'img3.gif';
     box.style.backgroundColor = 'orange';
 	  document.getElementById('myspan4').textContent = 'you attempt to climb the landslide down to the lake below. \nYou slip and fall breaking both legs and die slow and miserably \nEND';
   } 
 
 	else if (elem.id == 'a'){
-		   document.body.style.background = 'black';
+		   document.body.style.background = 'wheat';
 	  document.getElementById("myImage").src = 'cave.gif';
     document.body.style.background = 'black';
 	 box.style.backgroundColor = 'grey';
@@ -40,7 +41,7 @@ function Choice(elem) {
 	
 	else if (elem.id == 'b') {
 	  document.getElementById("myImage").src = 'dodge.gif';
-	   document.body.style.background = 'black';
+	   document.body.style.background = 'orange';
     box.style.backgroundColor = 'green';
 	   document.getElementById('myspan2').textContent = 'Nimbly you avoid the attack and rush to safety deep within the cavern \nbefore total exhaustion claims you';
   } 
@@ -66,14 +67,26 @@ function Choice(elem) {
     document.body.style.background = 'black';
 	 box.style.backgroundColor = 'black';
 		
-	   document.getElementById('myspan3').textContent = 'awaking later to some frightful noises you,' + ("lblName") +" "+ 'turn the corner and there \nDEATH FINDS YOU \nEND';
+	   document.getElementById('myspan3').textContent = 'awaking later to some frightful noises you, turn the corner and there \nDEATH FINDS YOU \nEND';
+		}
+	
+	
 
-	}
-
-  
-	 do {
-document.getElementById("heart").src = 'xheart.gif';
+	
+//	do {
+//document.getElementById("heart").src = 'xheart.gif';
  
-} while(
-elem.id === 'x' ||  elem.id === 'z');
+//} while(
+//elem.id == 'x' ||  element.id == 'y');
+	
+	
 }
+	
+// if (elem.id == 'x' ||  elem.id == 'z'){
+//	 document.getElementById("heart").src = 'xheart.gif';
+ // } 
+
+	//else  { document.getElementById("heart").src = 'heart.gif';
+//}
+
+	
