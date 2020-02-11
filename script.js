@@ -68,16 +68,16 @@ function Choice(elem) {
 	 box.style.backgroundColor = 'black';
 		
 	   document.getElementById('myspan3').textContent = 'awaking later to some frightful noises you, turn the corner and there \nDEATH FINDS YOU \nEND';
+				
+do {
+document.getElementById("heart").src = "xheart.gif";
+ 
+} while(elem.id == "x" || "z" || "c" || "d")
+
+
 		}
 	
-	
 
-	
-//	do {
-//document.getElementById("heart").src = 'xheart.gif';
- 
-//} while(
-//elem.id == 'x' ||  element.id == 'y');
 	
 	
 }
@@ -86,7 +86,5 @@ function Choice(elem) {
 //	 document.getElementById("heart").src = 'xheart.gif';
  // } 
 
-	//else  { document.getElementById("heart").src = 'heart.gif';
-//}
-
+	
 	
