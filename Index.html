@@ -1,78 +1,30 @@
 
-      <!DOCTYPE html>
 <html>
-<head><!-- I know this is terrible art but i had little time for it-->
-		 <script src="script.js"></script> 
-        <link rel="stylesheet" type="text/css" href="CSS.css">
-        <style type="text/css"></style>
+<head>
+<title>Image Array</title>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="css.css">
 </head>
-    
-  
+
 <body>
 	
-	<h1 align="center" id=h1>Enter name in character area to play!</h1>
-<!-- div creates the bkgnd -->
-
-<div> 
-<!-- creates the box-->
-<div id="box">
-<img id="myImage"  src="forrest.gif" class="center" alt = "whaaaaagh"   height = '500px align="middle'
-    width = '500px';>
-<pre>
-<!-- altered text by button press with the onclick-->
-
-
-<!-- buttons and their names -->
-
-<button id="x" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
-						 e.style.visibility='hidden'; ">Sleep</button>
-
-<button id="y" onclick="y.style.visibility='hidden';x.style.visibility='hidden'; Choice(this); ">Push on</button>
-<span id="myspan"  class="span"> "Alone and out of money, luck and charm 
-you wander far from town" </span>
-
-
-	
-<button id="z"  onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
-						 e.style.visibility='hidden';">landslide</button>
-<button id="a"  onclick="x.style.visibility='hidden';y.style.visibility='hidden';a.style.visibility='hidden'; z.style.visibility='hidden'; Choice(this); ">cavern</button>
-	<!-- good and out of order -->
-<span id="myspan4" class="span"> </span>
-	
-<button id="b" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';">Dodge</button>
-<button id="c" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
-						 e.style.visibility='hidden';">Block</button>
-	
-<span id="myspan2" class="span"> </span>
-	
-<button id="d" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
-						 e.style.visibility='hidden'";>Flee Right</button>
-<button id="e" onclick="z.style.visibility='hidden'; a.style.visibility='hidden'; Choice(this); x.style.visibility='hidden';
-						 y.style.visibility='hidden';b.style.visibility='hidden'; c.style.visibility='hidden';d.style.visibility='hidden';
-						 e.style.visibility='hidden'";>Flee Left</button>
-
-<span id="myspan3" class="span"> </span>
-	</pre>
+	<div id=cards>
+		
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>		
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
+<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
 </div>
-	   <label id="lblName">Your Name Goes Here</label><br>
-        <input id="txtName" type="text"><br>
-        <button id="btnSubmit" onclick="getName();">Submit</button><br>
-		<button onClick="window.location.reload();">Restart</button>
-	<Div Heart>
-		<img src="heart.gif" alt="life" width="100" height="100"class="heart" id="heart" /> 
-	</Div>
-		<script>
-	function getName(greeting)
-            {
-                var currentName = document.getElementById("txtName").value;
-                document.getElementById("lblName").innerHTML = currentName;  //", welcome to the game!" ;
-                 document.getElementById("h1").textContent = currentName+"," + " " + "Try to survive!";
-            }
-	</script> 
-		</body>
+	
+</body>
 </html>
+
+ 
+
+        

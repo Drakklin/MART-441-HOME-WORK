@@ -1,90 +1,28 @@
-// creating a object "box" as a constant. setting its size.
+var random_empty_array = [10];
+
+var random_images_array = ["card0.gif", "card1.gif", "card2.gif", "card3.gif", "card4.gif", "card0x.gif", "card1x.gif", "card2x.gif", "card3x.gif", "card4x.gif" ];
+
+function getRandomImage(imgAr, path) {
+    path = path || 'images/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
 
 
 
-function Choice(elem) {
-           
-  const box = document.getElementById('box');
-	myImage.style.height = '500px';
-    myImage.style.width = '500px';
-	// happy if loop with multiple attribute swaps. >>>>>>>>
-  if (elem.id == 'x'){
-	  // placeholder images...sorry
-	   document.body.style.background = 'Red';
-	document.getElementById("myImage").src = 'img1.gif';
-    box.style.backgroundColor = 'red';
-	  
-	  document.getElementById('myspan').textContent = 'Found in the night by robbers you become their prey \n END';
-  } 
-	// our buttons values are checked
-	else if (elem.id == 'y') {
-	  document.getElementById("myImage").src = 'crossroad.gif';
-	   document.body.style.background = 'grey';
-    box.style.backgroundColor = 'green';
-	   document.getElementById('myspan').textContent = 'Pushing through the dense woods you crest a hill and see before you';
-  } 
-	else if (elem.id == 'z') {
-		   document.body.style.background = 'red';
-	document.getElementById("myImage").src = 'img3.gif';
-    box.style.backgroundColor = 'orange';
-	  document.getElementById('myspan4').textContent = 'you attempt to climb the landslide down to the lake below. \nYou slip and fall breaking both legs and die slow and miserably \nEND';
-  } 
 
-	else if (elem.id == 'a'){
-		   document.body.style.background = 'wheat';
-	  document.getElementById("myImage").src = 'cave.gif';
-    document.body.style.background = 'black';
-	 box.style.backgroundColor = 'grey';
-	   document.getElementById('myspan4').textContent = 'An imposing cavern lays before you with a nefarious energy, formitable maw and a dark miasma \nA large bear suddenly looms and swipes for your head!';
-		
-	}
-	
-	else if (elem.id == 'b') {
-	  document.getElementById("myImage").src = 'dodge.gif';
-	   document.body.style.background = 'orange';
-    box.style.backgroundColor = 'green';
-	   document.getElementById('myspan2').textContent = 'Nimbly you avoid the attack and rush to safety deep within the cavern \nbefore total exhaustion claims you';
-  } 
-	else if (elem.id == 'c') {
-		   document.body.style.background = 'black';
-	document.getElementById("myImage").src = 'blackstar2.gif';
-    box.style.backgroundColor = 'dark red';
-	  document.getElementById('myspan2').textContent = 'Overwhelmed and ruined, you fall into a heap \nfrom the massive strike and lie dead \nEND';
-  } 
+var track=new Array();
 
-	else if (elem.id == 'd'){
-		   document.body.style.background = 'black';
-	  document.getElementById("myImage").src = 'exit.gif';
-    document.body.style.background = 'black';
-	 box.style.backgroundColor = 'yellow';
-	   document.getElementById('myspan3').textContent = 'awaking later to some frightful noises you, delerious and near dead stumble into the glaring light of day';
+while(true)
+{
+    var getRandomImage=Math.floor(Math.random()*imgAr.length);
 
-	}
-	    
-		else if (elem.id == 'e'){
-		   document.body.style.background = 'black';
-	  document.getElementById("myImage").src = 'darkking.jpg';
-    document.body.style.background = 'black';
-	 box.style.backgroundColor = 'black';
-		
-	   document.getElementById('myspan3').textContent = 'awaking later to some frightful noises you, turn the corner and there \nDEATH FINDS YOU \nEND';
-				
-do {
-document.getElementById("heart").src = "xheart.gif";
- 
-} while(elem.id == "x" || "z" || "c" || "d")
-
-
-		}
-	
-
-	
-	
+     if(track.indexOf(getRandomImage)==-1)
+     {
+        track.push(random);
+        break;
+     }
 }
-	
-// if (elem.id == 'x' ||  elem.id == 'z'){
-//	 document.getElementById("heart").src = 'xheart.gif';
- // } 
 
-	
-	
+}
