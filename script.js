@@ -1,28 +1,53 @@
-var random_empty_array = [10];
+var random_images_array = ["card1.gif", "card2.gif", "card3.gif", "card4.gif", "card5.gif"];
+// i need to understand how and why this works better
+const cards = document.querySelectorAll('.mem-card');
 
-var random_images_array = ["card0.gif", "card1.gif", "card2.gif", "card3.gif", "card4.gif", "card0x.gif", "card1x.gif", "card2x.gif", "card3x.gif", "card4x.gif" ];
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-function getRandomImage(imgAr, path) {
-    path = path || 'images/'; // default path here
-    var num = Math.floor( Math.random() * imgAr.length );
-    var img = imgAr[ num ];
-    var imgStr = '<img src="' + path + img + '" alt = "">';
-    document.write(imgStr); document.close();
+function flipCard() {
+// are the cards the same?
+  if (this === firstCard) return;
 
+  this.classList.add('flip');
 
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
 
+    return;
+  }
 
-var track=new Array();
-
-while(true)
-{
-    var getRandomImage=Math.floor(Math.random()*imgAr.length);
-
-     if(track.indexOf(getRandomImage)==-1)
-     {
-        track.push(random);
-        break;
-     }
+  secondCard = this;
+  matchCheck();
 }
 
+function matchCheck() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+// how can I unflip the cards? What I have tried does not work.... so shuffle is just here to keep it from breaking
+  isMatch ? killCards() : shuffle();
 }
+
+function killCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 10);
+    card.style.order = randomPos;
+  });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));

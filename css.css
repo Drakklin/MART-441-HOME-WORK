@@ -1,15 +1,54 @@
-#next a {background-image: url("nextoff.png");}
-#next a:hover {background-image: url("nexton.png");}
-#last a {background-image: url("lastoff.png");}
-#last a:hover {background-image: url("laston.png");}
-#controller {position: relative;}
-#controller li {position: absolute; list-style: none; display: block;height: 70px; width: 136px;}
-#controller a {display: block; text-indent: -999px; height: 70px;}
-#first {left: 0px;}
-#prev {left: 146px;}
-#next {left: 292px;}
-#last {left: 438px;}
-#first a {background-image: url("firstoff.png");}
-#first a:hover {background-image: url("firston.png");}
-#prev a {background-image: url("prevoff.png");}
-#prev a:hover {background-image: url("prevon.png");}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body 
+{
+background-color: black;	
+	
+}
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.mem-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.mem-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.mem-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #000000;
+  back-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
