@@ -1,30 +1,116 @@
 
-<html>
+<!doctype html>
+
 <head>
-<title>Image Array</title>
-<script src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="css.css">
+    <script>
+        var random_images_array = ["card0.gif", "card1.gif", "card2.gif", "card3.gif", "card4.gif"];
+
+        function getRandomImage(imgAr, path) {
+        
+            path = 'Images/';
+            var num = Math.floor(Math.random() * imgAr.length);
+            var img = imgAr[num];
+            
+  
+            var imgStr = '<img src="' + path + "/" + img + '" alt="">';
+            console.log(imgStr);
+            document.write(imgStr);
+            document.close();
+        	document.write(img); 
+			document.output(img);
+			return img;
+
+		}
+    </script>
 </head>
 
 <body>
 	
-	<div id=cards>
-		
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>		
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>
-<a href="/"><script type="text/javascript">getRandomImage(random_images_array);</script></a>	
-</div>
+	 <a href="/">
+    <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+			
+        </script>
+			<output name= "'card1'">  </output>
+		  </h1>
+    <a href="/">
+        <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+			
+        </script>
+			<output name= "'card2'">  </output>
+		  </h1>
+        <a href="/">
+            <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+            <a href="/">
+                <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+                <a href="/">
+                    <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+
+                    <a href="/">
+                        <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+                        <a href="/">
+                            <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+                            <a href="/">
+                                <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+                                <a href="/">
+                                    <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
+                                    <a href="/">
+                                        <h1>
+        <script type="text/javascript">
+            getRandomImage(random_images_array);
+
+        </script>
+
+		  </h1>
 	
+		
+
+
 </body>
+
 </html>
-
- 
-
-        
