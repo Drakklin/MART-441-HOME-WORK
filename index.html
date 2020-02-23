@@ -20,6 +20,7 @@
             document.write(img); 
 			document.output(img);
 			document.getElementById("demo").innerHTML = imgStr;
+			document.getElementById("demo2").innerHTML = imgStr;
 			document.close();
 		
 		
@@ -45,12 +46,41 @@ document.pic.src=='images/blank.gif';
 }
 	</script>
 	 <style type="text/css">
-	
-	
-	demo {
-  width: 100px;
-  height: 100px;
+    
+		 html {
+	box-sizing: border-box;
+}
+
+
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #00f00f;
+
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	text-align;
+	align-items: center;
+	flex-direction: column;
+	img {
+  vertical-align: middle;
+}
+}
 	</style>
+	
+	
+	
+	
 </head>
 
 <body onload = "getRandomImage();" >
@@ -59,7 +89,7 @@ document.pic.src=='images/blank.gif';
 
 
 				
-		  <div id="demo">
+		  <div id="demo" class = "container">
 			
 <img id="firstcard" src="images/blank.gif" class = "center" name="pic" onclick="getRandomImage(random_images_array)" alt=""  />
 
@@ -67,7 +97,13 @@ document.pic.src=='images/blank.gif';
 		</div>
 	
 		
-		
+				
+       <div id="demo2" class= "container">
+			
+<img id="secondcard" src="images/blank.gif" class = "center" name="pic2" onclick="getRandomImage(random_images_array)  " alt=""  />
+
+				
+		</div>
 
 
 </body>
