@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+        // need three arrays, one that holds the random images, one that keeps track of how many actual images have been inserted, 
+        // and an array that holds the actual images
+		var v = 0;
+        var random_images_array = ["card0.png", "card1.png", "card2.png", "card3.png", "card4.png"];
+        var exists = [0, 0, 0, 0, 0];
+        var actualImages = [];
+
+        /*
+            This function actually goes through and adds the actual images to the actualImages array
+        */
+        function getRandomImage() {
+
+            path = 'images/';
+            // must fill a 10 image array
+            for (var i = 0; i < 10; i++) {
+                // get a random image from the 5 images above
+                var num = Math.floor(Math.random() * random_images_array.length);
+                // create the full path to the image
+                var img = path + random_images_array[num];
+                // if only 0 or 1 images have been added to the full array, then add this random image into the actual array
+                if (exists[num] < 2) {
+                    actualImages[i] = img;
+				
+					
+					
+			
+					
+                } else {
+					
+                    // if the random image to be added has been add twice already, then keep getting a random number that hasn't been added twice
+                 while (exists[num] > 1) {  
+                        num = Math.floor(Math.random() * random_images_array.length);
+                        img = path + random_images_array[num];
+                    }
+                    actualImages[i] = img;
+                }
+                // increase the number of how many times a random images has been chosen and added to the actual array
+                exists[num] = exists[num] + 1;
+							
+					
+            }
+
+        }
+
+        function getActualImage(number) {
+		//var matchLog = []
+           // console.log(exists);
+            document.getElementById("image" + number).src = actualImages[number];
+		//	matchLog.push = actualImages[number];
+			
+				console.log(actualImages[number]); 
+			//    console.log(matchLog); 
+		//--------------------------------------------------------------------------------	// check if game is over
+		//	<<<< push/concan/something the actualImage[number] to a new array /// to do. check for repeated values?>>> 
+		//	var logWrite = matchlog.push(actualImages[number]);
+			//var logWrite = matchlog.concat (actualImages[number]);
+			//  console.log(matchLog[number]);
+			
+			
+		//-----------------------------------------------------------------------------
+		}
+
+function check(actualImages) 
+{
+//console.log(actualImages); 
+if(actualImages.length >1)
+	
+  return true;
+
+else
+	
+   return false;
+	
+	
+	
+}
+
+
+			
+		
+			
+			
+				
+        
+    </script>
+	
+</head>
+<!-- in the onload event, create the array of random images-->
+
+<body onload="getRandomImage();">
+    <!-- create all the empty images on the screen
+        create the onclick events for each image
+        pass in the number of the image that has been clicked.
+    -->
+	
+    <table>
+        <tr>
+            <td>
+                <img src="images/blank.png" id="image0" onclick= "getActualImage(0); check(exists);">
+           </td>
+            <td>
+                <img src="images/blank.png" id="image1" onclick="getActualImage(1); check(exists);">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/blank.png" id="image2" onclick="getActualImage(2);  check(exists);">
+            </td>
+            <td>
+                <img src="images/blank.png" id="image3" onclick="getActualImage(3);  check(exists);">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/blank.png" id="image4" onclick="getActualImage(4);  check(exists);">
+            </td>
+            <td>
+                <img src="images/blank.png" id="image5" onclick="getActualImage(5);  check(exists);">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/blank.png" id="image6" onclick="getActualImage(6);  check(exists);">
+            </td>
+            <td>
+                <img src="images/blank.png" id="image7" onclick="getActualImage(7);  check(exists);">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/blank.png" id="image8" onclick="getActualImage(8);  check(exists);">
+            </td>
+            <td>
+                <img src="images/blank.png" id="image9" onclick="getActualImage(9);  check(exists);">
+            </td>
+        </tr>
+    </table>
+<script>
+            window.onload = function getInformation()
+            {
+                var information = new URLSearchParams(location.search);
+                document.getElementById("message").innerHTML = information.get("info"); 
+            }
+        </script>
+   
+  
+        <div id="message"></div>
+ 
+</body>
+
+</html>
